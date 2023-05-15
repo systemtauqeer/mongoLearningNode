@@ -23,7 +23,6 @@ const Controllers = {
     },
     // Get User
     SignIn: async (x) => {
-        // let getData = await Users.findOne({ email: x.email, password: x.password });
         let getData = await Users.find();
         if (getData) return { message: "Get Data Successfully.", messageType: "success", users: getData };
         if (!getData) return { message: "User not found", messageType: "error" };
